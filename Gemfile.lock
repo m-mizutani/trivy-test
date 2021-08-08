@@ -64,6 +64,7 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     async-rack (0.4.0.1)
       rack (>= 1.1.0)
+    bson (3.0.3)
     builder (3.2.4)
     concurrent-ruby (1.1.9)
     crass (1.0.6)
@@ -165,6 +166,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bson (= 3.0.3)
   goliath
   rails
   rubyzip (= 1.2.1)
