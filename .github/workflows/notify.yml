@@ -5,6 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     name: Action test
     steps:
-      - uses: m-mizutani/cs-alert-notify@4a8908c980e48882bb7b5e6bd98dc05b313f26b7
+      - uses: m-mizutani/cs-alert-notify@dfdc18a9c9e3baa735f072f1688bad5c933a204a
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
