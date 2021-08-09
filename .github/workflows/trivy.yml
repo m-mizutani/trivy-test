@@ -31,10 +31,10 @@ jobs:
     if: ${{ github.head_ref != '' }}
     needs: scan
     steps:
-      - uses: m-mizutani/code-scanning-notify@29d7f2316b42072ca06ffd1128437a35112c9fa4
+      - uses: m-mizutani/code-scanning-notify@d5d3d37d39e659775c116098b5a4e55dd1bd3a3d
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           head-ref: ${{ github.head_ref }}
           base-ref: ${{ github.base_ref }}
           repo: ${{ github.repository }}
-          issue-id: github.event.number
+          issue-id: ${{ github.event.number }}
