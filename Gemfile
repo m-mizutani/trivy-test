@@ -6,3 +6,5 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 gem "rails"
 gem "rubyzip", "1.2.1"
+gem "goliath"
+gem "bson", "3.0.3"
