@@ -1,6 +1,8 @@
 name: Vuln scan
 
-on: [push]
+on:
+  pull_request:
+    types: ["opened", "synchronize"]
 
 jobs:
   scan:
@@ -25,7 +27,7 @@ jobs:
         with:
           sarif_file: "trivy-results.sarif"
   notify:
-    runs-on: ubuntu-latset
+    runs-on: ubuntu-latest
     if: ${{ github.head_ref != '' }}
     needs: scan
     steps:
@@ -36,4 +38,3 @@ jobs:
           base-ref: ${{ github.base_ref }}
           repo: ${{ github.repository }}
           issue-id: github.event.number
-
