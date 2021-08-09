@@ -31,7 +31,7 @@ jobs:
     if: ${{ github.head_ref != '' }}
     needs: scan
     steps:
-      - uses: m-mizutani/code-scanning-notify@33f157c512c492c3b4a1f306e48885da46548f70
+      - uses: m-mizutani/code-scanning-notify@29d7f2316b42072ca06ffd1128437a35112c9fa4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           head-ref: ${{ github.head_ref }}
